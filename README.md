@@ -19,11 +19,16 @@ skaffold
 ## Developed 🛠️
 
 - [Docker] docker
+- [Ingress-kubernetes] ingress-kubernetes
 - [Kubernetes] k8s
 - [Express] express
 - [TypeScript] typescript
 - [JWT] json-web-token
 - [Supertest] supertest
+- [React] React
+- [Next] next
+- [Supertest] supertest
+- [Bootstrap] bootstrap
 
 dependencies
 auth
