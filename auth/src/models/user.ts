@@ -1,16 +1,16 @@
 import mongoose from 'mongoose'
 import { Password } from '../services/password'
 
-interface UserProps {
+interface User {
   email: string
   password: string
 }
 
-interface UserModelProps extends mongoose.Model<UserDocProps> {
-  build(props: UserProps): UserDocProps
+interface UserModel extends mongoose.Model<UserDoc> {
+  build(props: User): UserDoc
 }
 
-interface UserDocProps extends mongoose.Document {
+interface UserDoc extends mongoose.Document {
   email: string,
   password: string
 }
@@ -42,10 +42,10 @@ userSchema.pre('save', async function(done) {
   }
 })
 
-userSchema.statics.build = (props: UserProps) => {
+userSchema.statics.build = (props: User) => {
   return new User(props)
 }
 
-const User = mongoose.model<UserDocProps, UserModelProps>('User', userSchema)
+const User = mongoose.model<UserDoc, UserModel>('User', userSchema)
 
 export { User }

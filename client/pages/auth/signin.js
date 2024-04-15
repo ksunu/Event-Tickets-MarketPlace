@@ -5,6 +5,7 @@ import useRequest from '../../hooks/use-request'
 const Signin = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
   const { doRequest, errors } = useRequest({
     url: '/api/users/signin',
     method: 'post',
@@ -14,13 +15,9 @@ const Signin = () => {
     onSuccess: () => Router.push('/')
   }) 
 
-  const handleEmail = (e) => {
-    setEmail(e.target.value)
-  }
+  const handleEmail = (e) => setEmail(e.target.value)
 
-  const handePassword = (e) => {
-    setPassword(e.target.value)
-  }
+  const handePassword = (e) => setPassword(e.target.value)
   
   const onSubmit = async (e) => {
     e.preventDefault()
