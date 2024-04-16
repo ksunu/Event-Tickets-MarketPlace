@@ -29,6 +29,7 @@ skaffold
 - [Next] next
 - [Supertest] supertest
 - [Bootstrap] bootstrap
+- [Npm] npm Package registry created package swticket published
 
 dependencies
 auth
