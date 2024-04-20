@@ -25,11 +25,12 @@ skaffold
 - [TypeScript] typescript
 - [JWT] json-web-token
 - [Supertest] supertest
+- [Jest] jest
 - [React] React
 - [Next] next
-- [Supertest] supertest
 - [Bootstrap] bootstrap
 - [Npm] npm Package registry created package swticket published
+- [Nats] Nats-streaming-service
 
 dependencies
 auth
