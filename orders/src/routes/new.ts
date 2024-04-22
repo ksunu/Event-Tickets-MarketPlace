@@ -47,7 +47,7 @@ router.post('/api/orders',
     // Publish event of order created
 
 
-    res.status(200).send(order)
+    res.status(201).send(order)
   }
 )
 
