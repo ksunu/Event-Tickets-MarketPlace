@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import { updateIfCurrentPlugin } from 'mongoose-update-if-current'
 import { Order, OrderStatus } from './order'
 
 interface TicketAttrs {
@@ -39,13 +40,7 @@ const ticketSchema = new mongoose.Schema({
 })
 
 ticketSchema.set('versionKey', 'version')
-
-ticketSchema.pre('save', function(done) {
-  this.$where = {
-    version: this.get('version') - 1
-  }
-  done()
-})
+ticketSchema.plugin(updateIfCurrentPlugin)
 
 ticketSchema.statics.build = (attrs: TicketAttrs) => {
   return new Ticket({
@@ -60,7 +55,6 @@ ticketSchema.statics.findByEvent = (event: { id: string, version: number }) => {
     version: event.version - 1
   })
 }
-
 ticketSchema.methods.isReserved = async function() {
   const existingOrder = await Order.findOne({
       ticket: this,
