@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express'
 import { NotAuthorizedError, NotFoundError, requireAuth } from '@swticket/common'
-import { Order, OrderStatus } from '../../models/order'
+import { Order, OrderStatus } from '../models/order'
 import { OrderCancelledPublisher } from '../events/publishers/order-cancelled-publisher'
 import { natsWrapper } from '../nats-wrapper'
 
