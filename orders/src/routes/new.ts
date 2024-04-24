@@ -10,7 +10,7 @@ import { natsWrapper } from '../nats-wrapper'
 const router = express.Router()
 
 // 15 minutes to expire ordering ticket
-const EXPIRATION_IN_SECONDS = 15 * 60
+const EXPIRATION_IN_SECONDS = 1 * 60
 
 router.post('/api/orders',
   requireAuth,
