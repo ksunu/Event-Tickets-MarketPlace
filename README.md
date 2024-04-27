@@ -31,9 +31,9 @@ Before running you will need to:
 1. build docker images and push them into your Docker context (auth, client, expiration, orders, payments and tickets)
 2. generate your own 2 secrets in k8s with
 
-- name: jwt-secret
+- name: jwt-secret,<br>
   key: JWT_KEY
-- name: stripe-secret
+- name: stripe-secret,<br>
   key: STRIPE_KEY
 
 3. when correctly configured, in th root of the project run skaffold
