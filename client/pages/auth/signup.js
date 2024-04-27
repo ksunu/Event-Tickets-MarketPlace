@@ -27,7 +27,7 @@ const Signup = () => {
   return (
     <form onSubmit={onSubmit}>
       <h1>Sign Up</h1>
-      <div className="form-group">
+      <div className="form-group mt-2">
         <label>Email Address</label>
         <input
           className="form-control"
@@ -35,7 +35,7 @@ const Signup = () => {
           onChange={handleEmail}
         />
       </div>
-      <div className="form-group">
+      <div className="form-group mt-2">
         <label>Password</label>
         <input
           type="password"
@@ -45,7 +45,9 @@ const Signup = () => {
         />
       </div>
       {errors}
-      <button className="btn btn-primary">Sign Up</button>
+      <button className="btn btn-primary mt-2">
+        Sign Up
+      </button>
     </form>
   )
 }
